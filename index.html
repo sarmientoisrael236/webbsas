@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebBsAs – Diseño de páginas web para negocios en Buenos Aires</title>
+<meta name="description" content="Diseño y desarrollo de sitios web profesionales para negocios en Buenos Aires. Código propio, responsive, sin plataformas pagas y con contacto por WhatsApp.">
+<meta name="keywords" content="diseño web Buenos Aires, páginas web para negocios, sitios web Buenos Aires, web para comercios, desarrollo web CABA, SEO local Buenos Aires, página web para pyme, portfolio web Argentina">
+<meta name="author" content="Israel Sarmiento">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://webbsas.com.ar/">
+<meta property="og:title" content="WebBsAs – Páginas web para negocios en Buenos Aires">
+<meta property="og:description" content="Diseño y desarrollo de sitios web para comercios y profesionales en Buenos Aires. Código propio, responsive y con contacto por WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://webbsas.com.ar/">
+<meta property="og:locale" content="es_AR">
+<meta name="theme-color" content="#0e0e0e">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "WebBsAs",
+  "description": "Diseño y desarrollo de sitios web profesionales para negocios en Buenos Aires.",
+  "url": "https://webbsas.com.ar/",
+  "telephone": "+5493541237972",
+  "email": "23sarmiento@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Buenos Aires"
+  },
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 09:00-18:00"
+}
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,300;0,700;1,300&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --negro: #0e0e0e;
+    --blanco: #f5f4f0;
+    --acento: #c8ff00;
+    --gris: #8a8a8a;
+    --gris-claro: #1e1e1e;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--negro);
+    color: var(--blanco);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 2rem;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    background: rgba(14,14,14,0.95);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+  }
+
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .logo span { color: var(--acento); }
+
+  .nav-links {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+  }
+
+  nav a {
+    color: var(--gris);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--blanco); }
+
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .service-card,
+  .testimonial,
+  .step {
+    background: #111;
+    border: 1px solid #222;
+    padding: 2rem;
+  }
+
+  .service-card h3,
+  .step h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-card p,
+  .step p,
+  .testimonial p {
+    color: var(--gris);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .work-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .testimonial strong {
+    color: var(--acento);
+    font-size: 0.95rem;
+  }
+
+  .contact-block {
+    background: linear-gradient(135deg, #111 0%, #151515 100%);
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 2rem 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--acento);
+    margin-bottom: 1.8rem;
+  }
+
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.8rem;
+    max-width: 780px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--acento);
+  }
+
+  .hero p {
+    color: var(--gris);
+    max-width: 520px;
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+
+  .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--acento);
+    color: var(--negro);
+    text-decoration: none;
+    padding: 0.85rem 2rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { opacity: 0.85; }
+
+  .btn-secondary {
+    border: 1px solid #333;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 0.85rem 2rem;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+    display: inline-block;
+  }
+
+  .btn-secondary:hover { border-color: var(--gris); }
+
+  /* SEPARADOR */
+  .divider {
+    border: none;
+    border-top: 1px solid #1e1e1e;
+  }
+
+  /* SECCIÓN TRABAJOS */
+  section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gris);
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #222;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .plan-card {
+    background: #111;
+    border: 1px solid #222;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: relative;
+  }
+
+  .plan-card.plan-featured {
+    border-color: var(--acento);
+    background: linear-gradient(180deg, rgba(200,255,0,0.08) 0%, #111 100%);
+  }
+
+  .plan-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .plan-badge {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--acento);
+  }
+
+  .plan-price {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    margin: 0;
+    color: var(--blanco);
+  }
+
+  .plan-delivery {
+    color: var(--gris);
+    font-size: 0.95rem;
+  }
+
+  .plan-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .plan-list li {
+    color: var(--gris);
+    font-size: 0.95rem;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+
+  .plan-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--acento);
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .plan-link {
+    margin-top: auto;
+    display: inline-block;
+    color: var(--blanco);
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 0.85rem 1.2rem;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .plan-link:hover {
+    color: var(--acento);
+    border-color: var(--acento);
+  }
+
+  .plan-popular {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: var(--acento);
+    color: var(--negro);
+    padding: 0.35rem 0.8rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border-radius: 999px;
+  }
+
+  /* CARDS */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5px;
+    background: #222;
+    border: 1.5px solid #222;
+  }
+
+  .card {
+    background: var(--negro);
+    padding: 2.5rem;
+    position: relative;
+    transition: background 0.2s;
+  }
+
+  .card:hover { background: #111; }
+
+  .card-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--acento);
+    margin-bottom: 1rem;
+  }
+
+  .card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .card p {
+    color: var(--gris);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+  }
+
+  .card a {
+    color: var(--blanco);
+    font-size: 0.82rem;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .card a:hover { color: var(--acento); border-color: var(--acento); }
+
+  /* POR QUÉ YO */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 3rem;
+    margin-top: 2.5rem;
+  }
+
+  .feature h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature p {
+    color: var(--gris);
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .feature-num {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    color: var(--acento);
+    font-weight: 300;
+    margin-bottom: 0.8rem;
+  }
+
+  /* CONTACTO */
+  .contact-block {
+    background: var(--gris-claro);
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .contact-block h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  .contact-block p {
+    color: var(--gris);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-block a.btn-primary {
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem auto 0;
+    max-width: 620px;
+    text-align: left;
+  }
+
+  .form-group {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .contact-form label {
+    font-size: 0.9rem;
+    color: var(--blanco);
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    background: #111;
+    border: 1px solid #222;
+    color: var(--blanco);
+    padding: 0.95rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 0.5rem;
+  }
+
+  .contact-form textarea {
+    min-height: 160px;
+    resize: vertical;
+  }
+
+  .btn-submit {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    background: var(--acento);
+    color: var(--negro);
+    padding: 0.95rem 1.8rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border-radius: 0.5rem;
+    transition: opacity 0.2s;
+  }
+
+  .btn-submit:hover {
+    opacity: 0.85;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: #444;
+    font-size: 0.78rem;
+    border-top: 1px solid #1e1e1e;
+  }
+
+  @media (max-width: 760px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .nav-links {
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .hero {
+      padding-top: 3rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Web<span>BsAs</span></div>
+  <div class="nav-links">
+    <a href="#servicios">Servicios</a>
+    <a href="#planes">Planes</a>
+    <a href="#trabajos">Trabajos</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <p class="hero-eyebrow">Diseño web · Buenos Aires, Argentina</p>
+  <h1>Páginas web para negocios en Buenos Aires<br><em>listas para vender</em> desde el primer día.</h1>
+  <p>Creo sitios web profesionales, rápidos y optimizados para Google. Código propio, sin plataformas pagas ni cuotas mensuales. Ayudo a comercios y profesionales de Buenos Aires a conseguir más clientes online.</p>
+  <div class="cta-group">
+    <a href="https://wa.me/5493541237972?text=Hola%20Israel!%20Vi%20tu%20portafolio%20y%20me%20interesa%20una%20p%C3%A1gina%20web." class="btn-primary">Contactarme por WhatsApp</a>
+    <a href="#planes" class="btn-secondary">Ver planes y precios</a>
+  </div>
+</div>
+
+<hr class="divider">
+
+<section id="servicios">
+  <div class="section-label">Servicios</div>
+  <div class="services">
+    <div class="service-card">
+      <h3>Web institucional Buenos Aires</h3>
+      <p>Landing page o sitio web corporativo para comercios, consultorios y profesionales en CABA. Diseño limpio, optimizado para SEO local y adaptado a celulares. Ideal para ganar visibilidad en Google Buenos Aires.</p>
+    </div>
+    <div class="service-card">
+      <h3>E-commerce para pymes</h3>
+      <p>Tienda online con catálogo, pasarela de pago y carrito de compras. Perfecta para marcas que venden en Buenos Aires y envían a todo el país. Sin cuotas mensuales obligatorias.</p>
+    </div>
+    <div class="service-card">
+      <h3>Landing page de conversión</h3>
+      <p>Página de captación para promociones, reservas, cursos o eventos. Mensaje claro, llamado a la acción directo y botón WhatsApp para convertir visitas en clientes.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="planes">
+  <div class="section-label">Planes</div>
+  <div class="pricing-grid">
+    <div class="plan-card">
+      <div class="plan-badge">Básico</div>
+      <h3>$150.000 ARS</h3>
+      <p class="plan-delivery">Entrega en 5 días</p>
+      <ul class="plan-list">
+        <li>1 página de presentación</li>
+        <li>Diseño a medida</li>
+        <li>Formulario de contacto</li>
+        <li>Adaptado a celular</li>
+      </ul>
+      <a class="plan-link" href="https://wa.me/5493541237972?text=Hola%20Israel!%20Me%20interesa%20el%20plan%20B%C3%A1sico.">Consultar</a>
+    </div>
+    <div class="plan-card plan-featured">
+      <div class="plan-popular">Más elegido</div>
+      <div class="plan-badge">Estándar</div>
+      <h3>$280.000 ARS</h3>
+      <p class="plan-delivery">Entrega en 7 días</p>
+      <ul class="plan-list">
+        <li>Hasta 5 secciones</li>
+        <li>Diseño a medida</li>
+        <li>Formulario de contacto</li>
+        <li>Galería de fotos</li>
+        <li>Botón WhatsApp flotante</li>
+        <li>Adaptado a celular</li>
+      </ul>
+      <a class="plan-link" href="https://wa.me/5493541237972?text=Hola%20Israel!%20Me%20interesa%20el%20plan%20Est%C3%A1ndar.">Consultar</a>
+    </div>
+    <div class="plan-card">
+      <div class="plan-badge">Premium</div>
+      <h3>$480.000 ARS</h3>
+      <p class="plan-delivery">Entrega en 12 días</p>
+      <ul class="plan-list">
+        <li>Hasta 10 secciones</li>
+        <li>Diseño premium</li>
+        <li>Blog incluido</li>
+        <li>Formulario avanzado</li>
+        <li>Galería de fotos</li>
+        <li>Botón WhatsApp flotante</li>
+        <li>SEO básico</li>
+        <li>1 mes de soporte</li>
+      </ul>
+      <a class="plan-link" href="https://wa.me/5493541237972?text=Hola%20Israel!%20Me%20interesa%20el%20plan%20Premium.">Consultar</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="trabajos">
+  <div class="section-label">Trabajos realizados</div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-tag">E-commerce · Buenos Aires</div>
+      <h3>BoluShop</h3>
+      <p>Tienda online desarrollada para una marca de indumentaria. Catálogo, carrito de compras, blog y pagos online. Envíos a todo el país con diseño a medida.</p>
+      <a href="https://www.bolushop.com" target="_blank" rel="noopener">Ver sitio → bolushop.com</a>
+    </div>
+    <div class="card">
+      <div class="card-tag">Portal de noticias · CABA</div>
+      <h3>El Irónico</h3>
+      <p>Periódico digital con sistema de IA para generación de contenido. Múltiples secciones, suscripciones y diseño editorial profesional. Proyecto 100% codeado a medida.</p>
+      <a href="https://www.elironico.com" target="_blank" rel="noopener">Ver sitio → elironico.com</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="section-label">Cómo trabajo</div>
+  <div class="work-steps">
+    <div class="step">
+      <h4>01 - Brief rápido</h4>
+      <p>Me contás tu negocio, tu cliente ideal y qué querés lograr con la web. Si no tenés todos los detalles, lo conversamos por WhatsApp.</p>
+    </div>
+    <div class="step">
+      <h4>02 - Propuesta clara</h4>
+      <p>Te envío un presupuesto con alcance, tiempos y ejemplos. Todo transparente: diseño, desarrollo y puesta en línea.</p>
+    </div>
+    <div class="step">
+      <h4>03 - Diseño y desarrollo</h4>
+      <p>Armo tu web con código propio. El sitio se adapta a móviles, carga rápido y está configurado para mostrarse bien en Google.</p>
+    </div>
+    <div class="step">
+      <h4>04 - Entrega y acompañamiento</h4>
+      <p>Publicamos tu web y te paso lo que necesitás para editar textos básicos. Si querés, te acompaño en la primera semana tras el lanzamiento.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="section-label">Testimonios</div>
+  <div class="testimonial-grid">
+    <div class="testimonial">
+      <strong>“Excelente trabajo para mi café en Palermo. La web se ve profesional y ya recibimos consultas por formulario.”</strong>
+      <p>– Sofía, propietaria de café en Palermo, CABA.</p>
+    </div>
+    <div class="testimonial">
+      <strong>“Necesitaba una tienda online para mi marca de ropa y la solución superó mis expectativas. Muy recomendable.”</strong>
+      <p>– Juan, vendedor de indumentaria, Buenos Aires.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<div class="contact-block" id="contacto">
+  <h2>Listo para tener una web<br>que represente tu negocio?</h2>
+  <p>Escribime por WhatsApp o dejá tus datos aquí y te respondo con una propuesta rápida.</p>
+  <a href="https://wa.me/5493541237972?text=Hola%20Israel!%20Vi%20tu%20portafolio%20y%20quiero%20una%20p%C3%A1gina%20web." class="btn-primary">Escribime por WhatsApp</a>
+  <form class="contact-form" id="contactForm" onsubmit="return enviarMensaje();">
+    <input type="hidden" id="waNumber" value="5493541237972">
+    <div class="form-group">
+      <label for="nombre">Nombre <span style="color:var(--acento);">*</span></label>
+      <input type="text" id="nombre" name="Nombre" placeholder="Tu nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="negocio">Negocio <span style="color:var(--acento);">*</span></label>
+      <input type="text" id="negocio" name="Negocio" placeholder="Nombre de tu negocio" required>
+    </div>
+    <div class="form-group">
+      <label for="telefono">Teléfono (opcional)</label>
+      <input type="tel" id="telefono" name="Telefono" placeholder="11 1234 5678">
+    </div>
+    <div class="form-group">
+      <label for="mensaje">Mensaje <span style="color:var(--acento);">*</span></label>
+      <textarea id="mensaje" name="Mensaje" placeholder="¿Qué querés lograr con la web?" required></textarea>
+    </div>
+    <button type="submit" class="btn-submit">Enviar mensaje por WhatsApp</button>
+    <p style="color:#888;font-size:0.85rem;margin-top:0.5rem;">
+      También podés escribir directamente a 
+      <a href="https://wa.me/5493541237972" target="_blank" rel="noopener" style="color:var(--acento);">+54 9 3541 23 7972</a>
+    </p>
+  </form>
+</div>
+
+<footer>
+  © 2026 WebBsAs · Israel Sarmiento · Buenos Aires, Argentina
+</footer>
+
+<script>
+  function enviarMensaje() {
+    const nombre = document.getElementById('nombre').value.trim();
+    const negocio = document.getElementById('negocio').value.trim();
+    const telefono = document.getElementById('telefono').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+    const numero = document.getElementById('waNumber').value;
+
+    if (!nombre || !negocio || !mensaje) {
+      alert('Por favor completá los campos obligatorios.');
+      return false;
+    }
+
+    const prefijo = encodeURIComponent("Hola Israel! Te contacto desde la web.\n\n");
+    const cuerpo = `Nombre: ${encodeURIComponent(nombre)}\nNegocio: ${encodeURIComponent(negocio)}${telefono ? `\nTeléfono: ${encodeURIComponent(telefono)}` : ''}\nMensaje: ${encodeURIComponent(mensaje)}`;
+    const url = `https://wa.me/${numero}?text=${prefijo}${cuerpo}`;
+
+    window.open(url, '_blank');
+    return false;
+  }
+</script>
+
+</body>
+</html>
