@@ -1,0 +1,17 @@
+{
+  "name": "webbsas",
+  "version": "1.0.0",
+  "description": "WebBsAs - Diseño de páginas web para negocios en Buenos Aires",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'No build step required for static HTML'",
+    "dev": "npx serve .",
+    "lint": "echo 'No linter configured'"
+  },
+  "keywords": ["website", "static"],
+  "author": "Israel Sarmiento",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.14"
+  }
+}
